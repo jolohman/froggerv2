@@ -71,8 +71,8 @@ body {
 	position: relative;
 	background: black;
 	animation: 
-			ballX 1s ease-in-out 0s infinite alternate, 
-			ballY 1.66s ease-in-out 0s infinite alternate;
+		ballX 1.2s ease-in-out 0s infinite alternate, 
+		ballY 1s ease-in-out 0s infinite alternate;
 }
 
 #rightball {
@@ -85,8 +85,8 @@ body {
 	position: relative;
 	background: black;
 	animation: 
-		ballX 1s ease-in-out 0s infinite alternate, 
-		ballY 1.66s ease-in-out 0s infinite alternate;
+		ballX 1.2s ease-in-out 0s infinite alternate, 
+		ballY 1s ease-in-out 0s infinite alternate;
 }
 
 .greenchin {
@@ -310,8 +310,8 @@ body {
 	height: 20px;
 	z-index: 3;
 	animation: 
-		flyX 1s ease-in-out 0s infinite alternate, 
-		flyY 1.66s ease-in-out 0s infinite alternate;
+		flyX 1.2s ease-in-out 0s infinite alternate, 
+		flyY 1s ease-in-out 0s infinite alternate;
 	border-radius: 30% 50% 50% 40%;
 	border: 2px solid black;
 	background: black;
