@@ -1,0 +1,363 @@
+*{
+	margin: 0;
+	padding: 0;
+	height:100%;
+} 
+
+body {
+	background-image: url("https://img00.deviantart.net/de1a/i/2014/259/2/c/background__field_by_estories-d7yhpl7.png");
+	background-size: 100% 100%;
+}
+
+
+.grid {
+	display: grid;
+	grid-template-columns: 10% 50% 40%;
+	grid-template-rows: 10% 50% 40%;
+	grid-template-areas:
+	". . ."
+	". frogger ."
+	". . .";
+}
+
+/*This next section is the head, the next commet*/
+
+.frogger {
+	grid-area: frogger;
+	height: 100%;
+	width: 100%;
+}
+
+.froghead {
+	width: 300px;
+	height: 300px;
+	background-color: none;
+	position: absolute;
+}
+
+.frogeyeleft {
+	display:inline-block;
+	top: 46px;
+	left: 90px;
+	width: 60px;
+	height: 160px;
+	z-index: 1;
+	border: 1px solid black;
+	border-radius: 60% 60%;
+	position: absolute;
+	background: white;
+}
+
+.frogeyeright {
+	display: inline-block;
+	top: 46px;
+	left: 135px;
+	width: 60px;
+	height: 160px;
+	border: 1px solid black;
+	border-radius: 60% 60%;
+	position: absolute;
+	background: white;
+}
+
+#leftball {
+	top: 39px;
+	left: 16px;
+	width: 40px;
+	height: 100px;
+	z-index: 1;
+	border-radius: 60% 60%;
+	border: 1px solid black;
+	position: relative;
+	background: black;
+	animation: 
+			ballX 1s ease-in-out 0s infinite alternate, 
+			ballY 1.66s ease-in-out 0s infinite alternate;
+}
+
+#rightball {
+	top: 39px;
+	left: 16px;
+	width: 40px;
+	height: 100px;
+	border-radius: 60% 60%;
+	border: 1px solid black;
+	position: relative;
+	background: black;
+	animation: 
+		ballX 1s ease-in-out 0s infinite alternate, 
+		ballY 1.66s ease-in-out 0s infinite alternate;
+}
+
+.greenchin {
+  top: 170px;
+  left: 42px;
+  position: absolute;
+  z-index: 2;
+  width: 220px;
+  height: 88px;
+  border: 1px solid black;
+  border-radius: 44%;
+	background: green;  
+}
+
+#mouth {
+  width: 90px;
+  height: 0px;
+  border: 2px solid black;
+  top: 45px;
+  left: 75px;
+  position: absolute;
+}
+
+.freckle {
+ position: relative;
+ width: 2px;
+ height:2px;
+ background: black;
+ border: 2px solid black;
+ border-radius: 100%;
+ }
+
+#freckle1 {
+  top: 27px;
+  left: 185px;
+}
+
+#freckle2 {
+  top: 21px;
+  left: 50px;
+}
+
+#freckle3 {
+  top: 15px;
+  left: 25px;
+}
+
+#freckle4 {
+  top: 30px;
+  left: 37.5px;
+}
+
+#freckle5 {
+	top: 24px;
+	left: 198px;
+}
+
+/*--------Next section Includes the Frogs Main body--------*/
+
+.main {
+	top: 230px;
+  left: 60px;
+  position: absolute;
+  z-index: 1;
+  width: 160px;
+  height: 210px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-radius: 50% 50% 50% 50%;
+	background: green;
+}
+
+.rightarm {
+	top: 340px;
+	left: 165px;
+	position: absolute;
+	z-index: 3;
+	width: 15px;
+	height: 115px;
+	border-right: 1px solid black;
+	border-left: 3px solid black;
+	background: green;
+}
+
+.righthand {
+	top: 434px;
+	left: 158px;
+	position: absolute;
+	z-index: 1;
+	width: 40px;
+	height: 60px;
+	transform: rotate(-60deg);
+	background: green;
+	border-top: 3px solid black;
+  	border-right: 1px solid black;
+ 	border-bottom: 1px solid black;
+  	border-left: 4px solid black;
+	border-radius: 50%;
+}
+
+.leftarm {
+	top: 340px;
+	left: 110px;
+	position: absolute;
+	z-index: 3;
+	width: 15px;
+	height: 115px;
+	border-right: 1px solid black;
+	border-left: 3px solid black;
+	background: green;
+}
+
+.lefthand {
+	top: 434px;
+	left: 103px;
+	position: relative;
+	width: 40px;
+	height: 60px;
+	z-index: 1;
+	transform: rotate(-60deg);
+	background: green;
+	border-top: 3px solid black;
+  	border-right: 1px solid black;
+ 	border-bottom: 1px solid black;
+  	border-left: 4px solid black;
+	border-radius: 50%;
+}
+
+.rightleg {
+	top: 270px;
+	left: -10px;
+	position: absolute;
+	width: 100px;
+	height: 180px;
+	z-index: -1;
+	transform: rotate(-50deg);
+	border-top: 3px solid black;
+  	border-right: 1px solid black;
+ 	border-bottom: 1px solid black;
+  	border-left: 4px solid black;
+  	border-radius: 50% 50% 50% 50%;
+	background: green;
+}
+
+.rfold {
+	top: 56px;
+	left: 48px;
+	width: 0px;
+	height: 120px;
+	z-index: -1;
+	position: relative;
+	border: 2px solid black ;
+}
+
+.rightfoot {
+	top: 370px;
+	left: 20px;
+	position: absolute;
+	width: 50px;
+	height: 160px;
+	z-index: -2;
+	transform: rotate(-125deg);
+	border-top: 4px solid black;
+  	border-right: 3px solid black;
+ 	border-bottom: 1px solid black;
+  	border-left: 1px solid black;
+  	border-radius: 40% 40% 50% 50%;
+	background: green;
+}
+
+.leftleg {
+	top: 250px;
+	left: 155px;
+	position: absolute;
+	width: 100px;
+	height: 180px;
+	z-index: -1;
+	transform: rotate(40deg);
+	border-top: 2px solid black;
+  	border-right: 1px solid black;
+ 	border-bottom: 1px solid black;
+  	border-left: 4px solid black;
+  	border-radius: 50% 50% 50% 50%;
+	background: green;
+}
+
+.lfold {
+	top: 56px;
+	left: 48px;
+	width: 0px;
+	height: 120px;
+	z-index: -1;
+	position: relative;
+	border: 2px solid black ;
+}
+
+.leftfoot {
+	top: 340px;
+	left: 190px;
+	position: absolute;
+	width: 50px;
+	height: 160px;
+	z-index: -2;
+	transform: rotate(110deg);
+	border-top: 4px solid black;
+  	border-right: 3px solid black;
+ 	border-bottom: 1px solid black;
+  	border-left: 1px solid black;
+  	border-radius: 40% 40% 50% 50%;
+	background: green;
+}
+
+/*--------  Fly that needs to be caught  ---------*/
+.flybody {
+	top: 400px;
+	left: 400px;
+	position: absolute;
+	width: 30px;
+	height: 20px;
+	z-index: 3;
+	animation: 
+		flyX 1s ease-in-out 0s infinite alternate, 
+		flyY 1.66s ease-in-out 0s infinite alternate;
+	border-radius: 30% 50% 50% 40%;
+	border: 2px solid black;
+	background: black;
+}
+
+.flyleftwing {
+	top: -12px;
+	left:-6px;
+	position: absolute;
+	width: 25px;
+	height: 20px;
+	z-index: 1;
+	border-radius: 50%;
+	border: 2px solid black;
+	background: white;
+}
+
+.flyrightwing {
+	top: -5px;
+	left: -6px;
+	position: absolute;
+	width: 25px;
+	height: 20px;
+	z-index: 3;
+	border-radius: 50%;
+	border: 2px solid black;
+	background: white;
+}
+
+/*--------  Animation Effects  ---------*/
+@keyframes ballX {
+	from {left: 3px;}
+	to   {left: 19px;}
+}
+
+@keyframes ballY {
+	from {top: 1px;}
+	to   {top: 45px;}
+}
+
+@keyframes flyX {
+  from {left: 5%;}
+  to   {left: 95%;}
+}
+
+@keyframes flyY {
+  from {top: 5%;}
+  to   {top: 95%;}
+}
